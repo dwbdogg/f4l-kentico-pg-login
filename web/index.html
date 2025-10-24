@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fit4Less • Member Login</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="brandbar">
+      <a class="brandlogo" href="#">
+        <span class="lozenge">F4L</span>
+        <span class="brandname">Fit4Less</span>
+      </a>
+    </header>
+
+    <main class="grid cols-2">
+      <section class="card padded">
+        <h1>Member Login</h1>
+        <p class="subtitle">Sign in with your email and password to access your account.</p>
+        <form id="loginForm" class="form">
+          <label>Email
+            <input type="email" id="email" autocomplete="username" required>
+          </label>
+          <label>Password
+            <input type="password" id="password" autocomplete="current-password" required>
+          </label>
+          <button class="btn btn-primary" type="submit" id="loginBtn">Log In</button>
+          <div id="msg" class="text-muted"></div>
+        </form>
+      </section>
+
+      <section class="card padded">
+        <h2>What happens here?</h2>
+        <ul class="bullets">
+          <li>Your credentials are sent to <code>/api/login</code> on the same domain.</li>
+          <li>The server securely calls PerfectGym API using <code>X-Client-Id</code> and <code>X-Client-Secret</code>.</li>
+          <li>On success we store a short‑lived session cookie; the browser never sees the Client Secret.</li>
+        </ul>
+        <div class="tag">Secure proxy</div>
+      </section>
+    </main>
+
+    <section class="card padded" id="profileCard" hidden>
+      <h2>Welcome</h2>
+      <pre id="profile"></pre>
+      <button class="btn btn-ghost" id="logout">Log out</button>
+    </section>
+
+    <footer class="footer">
+      <span class="text-muted">Demo. Do not use in production without reviewing security notes.</span>
+    </footer>
+  </div>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

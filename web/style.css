@@ -1,0 +1,39 @@
+:root{
+  --f4l-yellow:#F6B221;
+  --f4l-black:#111111;
+  --bg:#0E0E0E;
+  --surface:#151515;
+  --border:#222;
+  --muted:#BDBDBD;
+  --radius:18px;
+  --shadow:0 10px 24px rgba(0,0,0,.14);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#1a1a1a 0%,#0f0f0f 60%,var(--bg) 100%);color:#fff;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 64px}
+.brandbar{display:flex;align-items:center;gap:16px}
+.brandlogo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.lozenge{background:var(--f4l-yellow);color:var(--f4l-black);font-weight:800;border-radius:10px;padding:6px 10px;font-size:12px}
+.brandname{font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:1px}
+h1,h2{font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:#fff}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.08;margin:0 0 8px}
+h2{font-size:clamp(22px,4vw,32px);line-height:1.15;margin:0 0 10px}
+.subtitle{color:#dcdcdc;font-weight:600;letter-spacing:.2px;margin-bottom:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.padded{padding:24px}
+.grid{display:grid;gap:16px}
+.grid.cols-2{grid-template-columns:1.1fr .9fr}
+@media(max-width:920px){.grid.cols-2{grid-template-columns:1fr}}
+.form{display:grid;gap:12px}
+input{background:#0F0F0F;color:#fff;border:1px solid #2a2a2a;border-radius:12px;padding:12px 14px}
+input:focus{border-color:var(--f4l-yellow);outline:none;box-shadow:0 0 0 3px rgba(246,178,33,.22)}
+.btn{appearance:none;border:0;cursor:pointer;font-weight:800;letter-spacing:.4px;text-transform:uppercase;border-radius:999px;padding:14px 22px;transition:.18s transform,.18s box-shadow}
+.btn-primary{background:var(--f4l-yellow);color:var(--f4l-black);box-shadow:0 8px 18px rgba(246,178,33,.35)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(246,178,33,.45)}
+.btn-ghost{background:transparent;border:2px solid #2a2a2a;color:#fff}
+.bullets{margin:0;padding-left:20px}
+.bullets li{margin:8px 0}
+.text-muted{color:var(--muted)}
+.footer{margin-top:24px;color:#b9b9b9;font-size:12px}
+pre{white-space:pre-wrap;word-break:break-word}
